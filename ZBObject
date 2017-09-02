@@ -1,0 +1,56 @@
+package com.bisal.zb;
+
+public class ZBObject implements Comparable {
+	private String dutyName;
+	private String dutyPerson;
+	private String dPhone;
+	private String dEmail;
+	private String dDate;
+
+	public String getDName() {
+		return dName;
+	}
+
+	public void setDName(String dName) {
+		this.dName = dName;
+	}
+
+	public String getDPerson() {
+		return dPerson;
+	}
+
+	public void setDPerson(String dPerson) {
+		this.dPerson = dPerson;
+	}
+
+	public String getDPhone() {
+		return dPhone;
+	}
+
+	public void setDPhone(String dPhone) {
+		this.dPhone = dPhone;
+	}
+
+	public String getDEmail() {
+		return dEmail;
+	}
+
+	public void setDEmail(String dEmail) {
+		this.dEmail = dEmail;
+	}
+
+	public String getDDate() {
+		return dDate;
+	}
+
+	public void setDDate(String dDate) {
+		this.dDate = dDate;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		ZBObject zbo = (ZBObject)o;
+		String otherDName = zbo.getDName();
+		return this.dName.compareTo(otherDName);
+	}
+}
